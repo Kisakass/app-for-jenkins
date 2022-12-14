@@ -4,7 +4,7 @@ pipeline {
         stage ("-----------------Start building----------------"){
             when{
                 expression{
-                    env.BRANCH_NAME == 'master'
+                    env.BRANCH_NAME == main
                 }
             }
             steps{
