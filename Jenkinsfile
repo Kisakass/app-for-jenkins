@@ -2,7 +2,7 @@
     agent any
     parameters{
 	string(name:'USER_NAME', defaultValue:'Anonymous', description: 'Enter your name')
-	choice(name:'FAVORITE_COLOR', choices['red', 'gree', 'yellow'], description: "Choise your favorite color")
+	choice(name:'FAVORITE_COLOR', choices:['red', 'gree', 'yellow'], description: "Choise your favorite color")
     }
     environment{ 
         NEW_VERSION='1.3.0'
