@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage ("-----------------Start building----------------"){
             when{
-                condition{
-                    BRANCH_NAME=="main"
+                expression{
+                    BRANCH_NAME == 'main'
                 }
             }
             steps{
