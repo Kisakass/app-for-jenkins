@@ -6,7 +6,7 @@ pipeline {
                 echo "Building the app"
             }
         }
-        stage('-------------------Start test-------------------){
+        stage('-------------------Start test-------------------'){
             steps{
                 echo "Testing the app"
             }
