@@ -18,7 +18,7 @@
 		withCredentials([
 		    usernamePassword(credentialsId: 'ubuntu-ansible', usernameVariable: 'USER', passwordVariable: 'PWD')
 		]) {
-		   sh "some script ${USER}, ${PWD}"
+		   sh 'echo " ${USER}, ${PWD}"'
 		}
             }
         }
