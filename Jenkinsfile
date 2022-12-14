@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
     environment{ 
         NEW_VERSION='1.3.0'
@@ -18,7 +18,7 @@ pipeline {
 		withCredentials([
 		    usernamePassword(credentials: 'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
 		]) {
-		   sh 'echo "${User}, ${PWD}"' 
+		   sh "some script ${USER}, ${PWD}"
 		}
             }
         }
