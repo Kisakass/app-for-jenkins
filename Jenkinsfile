@@ -2,6 +2,7 @@
     agent any
     parameters{
 	string(name:'USER_NAME', defaultValue:'Anonymous', description: 'Enter your name')
+    }
     environment{ 
         NEW_VERSION='1.3.0'
     }    
