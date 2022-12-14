@@ -4,7 +4,7 @@ pipeline {
         stage ("-----------------Start building----------------"){
             when{
                 expression{
-                    branch "main"
+                    branch "master"
                 }
             }
             steps{
