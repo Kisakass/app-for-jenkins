@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-        stage ("-----------------Start building----------------){
+        stage ("-----------------Start building----------------"){
             when{
                 condition{
                     BRANCH_NAME=="main"
@@ -14,7 +14,7 @@ pipeline {
                 echo "Building the app two"
             }
         }
-        stage('-------------------Start test-------------------){
+        stage('-------------------Start test-------------------"){
             steps{
                 echo "Testing the app"
             }
