@@ -15,7 +15,7 @@
             steps{
                 echo "Building app version ${NEW_VERSION}"
 		echo "your name is ${params.USER_NAME}"
-		echo "your favorite color is ${params.FAVORITE_COLOR"}
+		echo "your favorite color is ${"params.FAVORITE_COLOR"}
             }
         }
         stage('-------------------Start test-------------------'){
