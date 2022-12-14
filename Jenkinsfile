@@ -18,7 +18,7 @@ pipeline {
 		withCredentials{[
 		    UsernamePassword(credentials: 'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
 		]} {
-		   sh 'echo "${User}, ${PWD}'" 
+		   sh 'echo "${User}, ${PWD}"' 
 		}
             }
         }
