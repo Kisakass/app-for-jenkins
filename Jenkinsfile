@@ -15,6 +15,11 @@ pipeline {
         stage('-------------------Start test-------------------'){
             steps{
                 echo "Testing the app"
+		withCredentials{[
+		    UsernamePassword(credentials: 'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
+		]} {
+		   sh 'echo "${User}, ${PWD}'" 
+		}
             }
         }
     }
