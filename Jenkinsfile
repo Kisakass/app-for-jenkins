@@ -16,7 +16,7 @@
             steps{
                 echo "Testing the app"
 		withCredentials([
-		    usernamePassword(credentials: 'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
+		    usernamePassword(credentialsId: 'ubuntu-ansible', usernameVariable: 'USER', passwordVariable: 'PWD')
 		]) {
 		   sh "some script ${USER}, ${PWD}"
 		}
