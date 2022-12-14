@@ -13,7 +13,7 @@
             }
             steps{
                 echo "Building app version ${NEW_VERSION}"
-		echo "your name is ${USER_NAME}"
+		echo "your name is ${params.USER_NAME}"
             }
         }
         stage('-------------------Start test-------------------'){
@@ -22,7 +22,7 @@
 		withCredentials([
 		    usernamePassword(credentialsId: 'ubuntu-ansible', usernameVariable: 'USER', passwordVariable: 'PWD')
 		]) {
-		   echo " ${params.USER}, ${params.PWD}"
+		   echo " ${USER}, ${PWD}"
 		}
             }
         }
