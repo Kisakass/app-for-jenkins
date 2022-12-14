@@ -22,7 +22,7 @@
 		withCredentials([
 		    usernamePassword(credentialsId: 'ubuntu-ansible', usernameVariable: 'USER', passwordVariable: 'PWD')
 		]) {
-		   echo " ${USER}, ${PWD}"
+		   echo " ${params.USER}, ${params.PWD}"
 		}
             }
         }
