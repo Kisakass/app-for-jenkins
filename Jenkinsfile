@@ -2,7 +2,6 @@ pipeline{
     agent any
     environment{
 	NEW_VERSION='1.3.0'
-	STAGE_CREDENTIALS=credentials("ubuntu-ansible")
     }
     stages{
 	stage("Preparing app"){
@@ -22,8 +21,12 @@ pipeline{
         }
         stage("Testing app") {
             steps{
-                echo "Testing app version ${NEW_VERSION}"
-		echo "Testing for ${STAGE_CREDENTIALS_PSW}"
+		withCredentials([
+		   usernamePassword:credentialsId:'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD
+		]){
+                	echo "Testing app version ${NEW_VERSION}"
+			echo "Print credentials name ${USER}, password is ${PWD}
+		}
             }
         }
     }
