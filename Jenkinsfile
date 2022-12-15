@@ -22,7 +22,7 @@ pipeline{
         stage("Testing app") {
             steps{
 		withCredentials([
-		   usernamePassword:credentialsId:'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD
+		   usernamePassword(credentialsId:'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
 		]){
                 	echo "Testing app version ${NEW_VERSION}"
 			echo "Print credentials name ${USER}, password is ${PWD}
