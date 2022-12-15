@@ -25,7 +25,7 @@ pipeline{
 		   usernamePassword(credentialsId:'ubuntu-ansible', usernameVariable: USER, passwordVariable: PWD)
 		]){
                 	echo "Testing app version ${NEW_VERSION}"
-			echo "Print credentials name ${USER}, password is ${PWD}"
+			echo "${USER},${PWD}"
 		}
             }
         }
