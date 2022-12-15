@@ -23,7 +23,7 @@ pipeline{
         stage("Testing app") {
             steps{
                 echo "Testing app version ${NEW_VERSION}"
-		echo "Testing for ${STAGE_CREDENTIALS}"
+		echo "Testing for ${STAGE_CREDENTIALS_PSW}"
             }
         }
     }
