@@ -17,6 +17,11 @@ pipeline{
 	    }
          }
          steps{
+	    withCredentials([
+		usernamePassword(credentialsId:'ubuntu-ansible', userVariable:'USER','passwordVariable:'passWD')
+            ]) {
+		   echo "user: ${USER}, password: ${passWD}"
+               }
             echo "Start testing app"
          }
       }
