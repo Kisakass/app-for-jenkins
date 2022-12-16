@@ -9,7 +9,7 @@ pipeline{
       stage("Start testing app") {
 	 when{
 	    expression{
-		BRANCH_NAME=='dev'
+		env.BRANCH_NAME=='dev'
 	    }
          }
          steps{
