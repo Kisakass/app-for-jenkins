@@ -21,7 +21,7 @@ pipeline{
 		   echo "user: ${USER}, password: ${passWD}"
                }
             echo "Start testing app"
-	    echo "Your username is ${USERNAME}"
+	    echo "Your username is ${params.USERNAME}"
          }
       }
    }
