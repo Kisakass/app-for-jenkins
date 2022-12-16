@@ -1,5 +1,8 @@
 pipeline{
    agent any
+   parameters{
+       string(name:"USERNAME", defaultValue:"Anonymous", description: "Enter your username")
+   }
    environment{
 	APP_VERSION='1.3.0'
    }
@@ -18,6 +21,7 @@ pipeline{
 		   echo "user: ${USER}, password: ${passWD}"
                }
             echo "Start testing app"
+	    echo "Your username is ${USERNAME}"
          }
       }
    }
