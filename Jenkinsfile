@@ -7,7 +7,7 @@ pipeline{
       stage("Start building app") {
          steps{
             echo "Start Building app echo"
-	    echo "Print envrionment variable"
+	    echo "Print envrionment variable ${APP_VERSION}"
          }
       }
       stage("Start testing app") {
