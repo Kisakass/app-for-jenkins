@@ -2,6 +2,7 @@ pipeline{
    agent any
    parameters{
        string(name:"USERNAME", defaultValue:"Anonymous", description: "Enter your username")
+       choice(name:"FAVORITE_COLOR", choices['red', 'yellow', 'green'], descritpion: 'choose your favorite color')'
    }
    environment{
 	APP_VERSION='1.3.0'
@@ -11,6 +12,7 @@ pipeline{
          steps{
             echo "Start Building app echo"
 	    echo "envrionment variable ${APP_VERSION}"
+	    echo "your favorite color is ${params.FAVORITE_COLOR}"
          }
       }
       stage("Start testing app") {
