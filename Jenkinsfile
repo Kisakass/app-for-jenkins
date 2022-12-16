@@ -2,7 +2,7 @@ pipeline{
    agent any
    parameters{
        string(name:"USERNAME", defaultValue:"Anonymous", description: "Enter your username")
-       choice(name:"FAVORITE_COLOR", choices:['red', 'yellow', 'green'], descritpion: 'choose your favorite color')
+       choice(name:"FAVORITE_COLOR", choices:['red', 'yellow', 'green'], description: 'choose your favorite color')
    }
    environment{
 	APP_VERSION='1.3.0'
