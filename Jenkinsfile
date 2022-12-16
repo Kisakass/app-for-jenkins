@@ -18,7 +18,7 @@ pipeline{
          }
          steps{
 	    withCredentials([
-		usernamePassword(credentialsId:'ubuntu-ansible', userVariable:'USER','passwordVariable:'passWD')
+		usernamePassword(credentialsId:'ubuntu-ansible', usernameVariable:'USER',passwordVariable:'passWD')
             ]) {
 		   echo "user: ${USER}, password: ${passWD}"
                }
