@@ -11,11 +11,6 @@ pipeline{
          }
       }
       stage("Start testing app") {
-	 when{
-	    expression{
-		env.BRANCH_NAME=='dev'
-	    }
-         }
          steps{
 	    withCredentials([
 		usernamePassword(credentialsId:'ubuntu-ansible', usernameVariable:'USER',passwordVariable:'passWD')
