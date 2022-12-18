@@ -13,6 +13,7 @@ pipeline{
             echo "Start Building app echo"
 	    echo "envrionment variable ${APP_VERSION}"
 	    echo "your favorite color is ${params.FAVORITE_COLOR}"
+	    echo "Hi"
          }
       }
       stage("Start testing app") {
