@@ -6,6 +6,7 @@ nano pipeline{
 	parameters{
 		string(name:'NAME', defaultValue: 'Anonymous', description: 'Enter your name')	
 		choice(name: 'CHOICES', choices: ['red', 'green'], description: 'Choose')
+		boolen(name: 'Are you gay?', defaultValue: 'yes', description: 'say yes')
 	}
 	stages{
 		stage("build") {
