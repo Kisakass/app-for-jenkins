@@ -5,7 +5,7 @@ nano pipeline{
 	}
 	parameters{
 		string(name:'NAME', defaultValue: 'Anonymous', description: 'Enter your name')	
-		choice(name: CHOICES', choices: ['red', 'green'], description: 'Choose')
+		choice(name: 'CHOICES', choices: ['red', 'green'], description: 'Choose')
 	}
 	stages{
 		stage("build") {
