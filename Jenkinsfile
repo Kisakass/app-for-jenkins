@@ -1,4 +1,4 @@
-pipeline{
+opipeline{
 	agent any
 	stages{
 		stage("build") {
