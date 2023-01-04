@@ -5,6 +5,7 @@ pipeline{
 	}
 	parameters{
 		string(name:'NAME', defaultValue: 'Anonymous', description: 'Enter your name')	
+		chice(name:'CHOICE', choices: ['red', 'green'], description: 'Choose')
 	}
 	stages{
 		stage("build") {
@@ -24,6 +25,7 @@ pipeline{
 		stage("stage-3") {
 			steps {
 				echo "Your name is $NAME"
+				echo "ck $CHOICE"
 			}
 		}
 	}
