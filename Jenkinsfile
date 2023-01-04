@@ -5,7 +5,7 @@ pipeline{
 	}
 	parameters{
 		string(name:'NAME', defaultValue: 'Anonymous', description: 'Enter your name')	
-		chice(name:'CHOICE', choices: ['red', 'green'], description: 'Choose')
+		choice(name:'CHOICE', choices: ['red', 'green'], description: 'Choose')
 	}
 	stages{
 		stage("build") {
