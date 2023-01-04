@@ -12,7 +12,11 @@ pipeline{
 		}
 		stage("test") {
 			steps{
-				echo "---------------------start testing-------------------------"
+				withCredentials([
+					useernamePassword(credentialsId: "github-ssh-key", UsernameVariable: USER, PasswordVariable: PWD) {
+						echo "credentials is: $USER and pwd is $PWD"
+					}
+				])
 			}
 		}
 	}
