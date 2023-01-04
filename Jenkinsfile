@@ -5,7 +5,7 @@ pipeline{
 	}
 	parameters{
 		string(name:'NAME', defaultValue: 'Anonymous', description: 'Enter your name')	
-		choice(name:'HUI', choices: ['red', 'green'], description: 'Choose')
+		choice(name: 'FAVORITE', choices: ['red', 'green'], description: 'Choose')
 	}
 	stages{
 		stage("build") {
@@ -25,7 +25,7 @@ pipeline{
 		stage("stage-3") {
 			steps {
 				echo "Your name is $NAME"
-				echo "ck $HUI"
+				echo "ck $FAVORITE"
 			}
 		}
 	}
