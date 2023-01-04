@@ -14,7 +14,7 @@ pipeline{
 			steps{
 				withCredentials([
 					usernamePassword(credentials: "github-ssh-key", usernameVariable: USER, passwordVariable: PWD) ]) {
-						echo "credentials is: $USER and pwd is $PWD"
+						sh "some code $USER and $PWD"
 					}
 			}
 		}
