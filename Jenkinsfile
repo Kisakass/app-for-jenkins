@@ -4,7 +4,7 @@ pipeline{
 		MY_NAME= 'sasha'
 	}
 	parameters{
-		string(name:"NAME", defaultValue: "Anonymous", decription: "Enter your name")	
+		string(name:"NAME", defaultValue: "Anonymous", description: "Enter your name")	
 	}
 	stages{
 		stage("build") {
