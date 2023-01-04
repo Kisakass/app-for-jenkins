@@ -3,6 +3,9 @@ pipeline{
 	environment {
 		MY_NAME= 'sasha'
 	}
+	parameters{
+		stirng(name:"NAME", defaultValue: "Anonymous", decription: "Enter your name")	
+	}
 	stages{
 		stage("build") {
 			steps {
@@ -16,6 +19,11 @@ pipeline{
 					usernamePassword(credentialsId: 'ubuntu-ansible', usernameVariable: 'USER', passwordVariable: 'PWD') ]) {
 						echo "some code $USER and $PWD"
 					}
+			}
+		}
+		stage("stage-3") {
+			steps {
+				echo "Your name is $NAME"
 			}
 		}
 	}
