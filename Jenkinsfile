@@ -1,4 +1,4 @@
-pipeline{
+nano pipeline{
 	agent any
 	environment {
 		MY_NAME= 'sasha'
