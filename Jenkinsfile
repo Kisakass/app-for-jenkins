@@ -13,7 +13,7 @@ pipeline{
 		stage("test") {
 			steps{
 				withCredentials([
-					usernamePassword(credentials: "github-ssh-key", UsernameVariable: USER, passwordVariable: PWD) ]) {
+					usernamePassword(credentials: "github-ssh-key", usernameVariable: USER, passwordVariable: PWD) ]) {
 						echo "credentials is: $USER and pwd is $PWD"
 					}
 			}
